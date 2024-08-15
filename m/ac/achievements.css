@@ -259,3 +259,26 @@ button:hover, a:hover {
     justify-content: space-between; /* Adjusts the space between cards */
     flex-wrap: wrap; /* Allows wrapping if the screen is too small */
 }
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid slategrey;
+  background-color: slategrey;
+  padding: 10px;
+  text-align: center;
+} 
+.center-v2 {
+	text-align: center;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> 
+		<title>Online Resume</title>
+		<link rel="icon" type="image/png" href="../../assets/media/images/icon.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="contact.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?fam`ily=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div class="navbar">
+			<a class="ubuntu-regular" href="../home/home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+			<a class="ubuntu-regular" href="../about/about.html"><i class="fa fa-fw fa-search"></i> About</a>
+			<a class="active" class="ubuntu-regular" href="../c/contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+			<a class="ubuntu-regular" href="../g/game.html"><i class="fa fa-gamepad"></i> Games</a>
+			<a class="ubuntu-regular" href="../ac/achievements.html"><i class="fa fa-handshake-o"></i> Achievements</a>
+    	</div>
+		<div class="video-background">
+		<video autoplay muted loop id="bg-video">
+		<source src="../../assets/media/videos/rainv2.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+		</video>
+		</div>
+		
+		<!-- Add more content as needed -->
+		<br><br><br><br><br>
+		<h1 class="center">Contact</h1>
+		<br><br>
+		<p class="center-v3">You can contact me at any time at the email <a href=mailto:"443411305@kingswoodhs.nsw.edu.au">443411305@kingswoodhs.nsw.edu.au</a><br><br> Or you can submit this form</p>
+		<br>
+		 <div class="extra-container">
+  <form id="contact-form">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="first-name" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="last-name" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="Australia">Australia</option>
+      <option value="Canada">Canada</option>
+      <option value="United States">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+			 <script>
+					document.getElementById('contact-form').addEventListener('submit', function(event) {
+					event.preventDefault(); // Prevent the default form submission behavior
+
+					// Get form values
+					const firstName = document.getElementById('first-name').value;
+					const lastName = document.getElementById('last-name').value;
+					const country = document.getElementById('country').value;
+					const subject = document.getElementById('subject').value;
+
+					// Set recipient and compose email body
+					const recipient = '443411305@kingswoodhs.nsw.edu.au;
+					const body = `First Name: ${firstName}\nLast Name: ${lastName}\nCountry: ${country}\n\nThis is the body of the email.`;
+
+					// Create mailto link
+					const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+					// Redirect to mailto link
+					window.location.href = mailtoLink;
+				});
+			 </script>
+</div> 
+	</body>
+</html>

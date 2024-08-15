@@ -158,10 +158,11 @@ html, body {
 .center {
   margin: auto;
   width: 50%;
-  border: 3px solid rgba(112, 128, 144, 0.5); /* slategrey with 50% opacity */
-  background-color: rgba(112, 128, 144, 0.5);
+  border: 3px rgba(255, 255, 255, 0.5); /* slategrey with 50% opacity */
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   text-align: center;
+	border-radius: 10px;
 } 
 .center-v2 {
 	text-align: center;
@@ -169,8 +170,9 @@ html, body {
 .center-v3 {
   margin: auto;
   width: 75%;
-  border: 3px solid rgba(112, 128, 144, 0.5); /* slategrey with 50% opacity */
-  background-color: rgba(112, 128, 144, 0.5);
+  border: 3px rgba(255, 255, 255, 0.5); /* slategrey with 50% opacity */
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   text-align: center;
+	border-radius: 10px;
 } 

@@ -281,6 +281,7 @@ div.scroll-container img {
   background-color: slategrey;
   padding: 10px;
   text-align: center;
+	border-radius: 10px;
 } 
 .center-v2 {
 	text-align: center;
@@ -308,6 +309,7 @@ div.scroll-container img {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   text-align: center;
+	\
 }
 
 /*This comment will fix everything*/

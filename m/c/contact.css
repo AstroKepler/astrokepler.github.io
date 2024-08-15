@@ -158,9 +158,10 @@ html, body {
 .center {
   margin: auto;
   width: 25%;
-  border: 3px solid rgba(112, 128, 144, 0.5); /* slategrey with 50% opacity */
-  background-color: rgba(112, 128, 144, 0.5);
+  border: 3px rgba(255, 255, 255, 0.5); /* slategrey with 50% opacity */
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
+	border-radius: 10px;
   text-align: center;
 } 
 .center-v2 {
@@ -169,10 +170,12 @@ html, body {
 .center-v3 {
   margin: auto;
   width: 75%;
-  border: 3px solid rgba(112, 128, 144, 0.5); /* slategrey with 50% opacity */
-  background-color: rgba(112, 128, 144, 0.5);
+  border: 3px rgba(255, 255, 255, 0.5); /* slategrey with 50% opacity */
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   text-align: center;
+	border-radius: 10px;
+	
 } 
 input[type=text], select, textarea {
   width: 100%; /* Full width */
@@ -204,9 +207,9 @@ input[type=submit]:hover {
 .extra-container {
 	margin: auto;
   width: 75%;
-  border: 3px solid rgba(112, 128, 144, 0.5); /* slategrey with 50% opacity */
-  background-color: rgba(112, 128, 144, 0.5);
+  border: 3px rgba(255, 255, 255, 0.5); /* slategrey with 50% opacity */
+  background-color: rgba(255, 255, 255, 0.5);
   text-align: center;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 20px;
 }

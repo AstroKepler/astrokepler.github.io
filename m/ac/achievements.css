@@ -245,12 +245,6 @@ button {
 	font-size: 18px;
 }
 
-a {
-	text-decoration: none;
-	font-size: 22px;
-	color: black;
-}
-
 button:hover, a:hover {
 	opacity: 0.7;
 }
@@ -303,13 +297,13 @@ div.scroll-container img {
     filter: blur(10px); /* Adjust the blur level as needed */
 }
 .center-v3 {
-  margin: auto;
-  width: 50%;
-  border: 3px rgba(255, 255, 255, 0.5); /* slategrey with 50% opacity */
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 10px;
-  text-align: center;
-	\
+	margin: auto;
+	width: 50%;
+	border: 3px rgba(255, 255, 255, 0.5); 
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 10px;
+	text-align: center;
+	
 }
 
 /*This comment will fix everything*/

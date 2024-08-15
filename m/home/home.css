@@ -1,6 +1,7 @@
 /* Style the navigation bar */
 .navbar {
-  position: fixed; /* Keep the navbar fixed at the top */
+  position: fixed;
+	left: 0;/* Keep the navbar fixed at the top */
   top: 0; /* Position it at the top of the viewport */
   width: 100%;
   background-color: #555;
@@ -10,6 +11,7 @@
 /* Navbar links */
 .navbar a {
   float: left;
+	
   text-align: center;
   padding: 19px;
   color: white;
@@ -54,6 +56,7 @@
 .content {
   position: fixed;
   bottom: 0;
+	left: 0;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;

@@ -265,7 +265,6 @@ button:hover, a:hover {
     display: flex;
     justify-content: space-between; /* Adjusts the space between cards */
     flex-wrap: wrap; /* Allows wrapping if the screen is too small */
-	background-color: #292929 !important;
 }
 div.scroll-container {
   background-color: #333;

@@ -176,6 +176,7 @@
 			<a class="ubuntu-regular" href="../c/contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
 			<a class="ubuntu-regular" href="../g/game.html"><i class="fa fa-gamepad"></i> Games</a>
 			<a class="active" class="ubuntu-regular" href="../ac/achievements.html"><i class="fa fa-handshake-o"></i> Achievements</a>
+			<a class="ubuntu-regular" href="../s/settings.html"><i class="fa fa-gear"></i> Settings</a>
 			
 		</div>
 		<div class="video-background">
@@ -314,11 +315,10 @@
 		<!-- Container for the image gallery -->
 		<div class="scroll-container">
 			<img src="../../assets/media/images/deez.png" alt="Birdfeeder Task" width="600" height="400">
-			<img src="../../assets/media/images/deez.png" alt="Mathematics Extension 1 Placement" width="600" height="400">
-			<img src="../../assets/media/images/deez.png" alt="Physics Placement" width="600" height="400">
-			<img src="../../assets/media/images/deez.png" alt="Enterprise Computing Placement" width="600" height="400">
-			<img src="../../assets/media/images/deez.png" alt="Engineering Placement" width="600" height="400">
-			<img src="../../assets/media/images/deez.png" alt="Chemistry Placement" width="600" height="400">
+			<img src="../../assets/media/images/thing.png" alt="Math survey thingy 2023" width="600" height="400">
+			<img src="../../assets/media/images/arcthing.png" alt="Some random thing in 2022" width="600" height="400">
+			<img src="../../assets/media/images/nucklere.png" alt="2023 Science Open Night" width="600" height="400">
+			
 			
 		</div>
 		<br>
@@ -454,6 +454,55 @@
     	</div>
 		</div>
 		
-		
+		<script>
+			const darkModeToggle = document.getElementById('darkModeToggle');
+
+			// Select all elements with the "center" class
+			const contentElements = document.querySelectorAll('.center');
+			const contentElementsv3 = document.querySelectorAll('.center-v3');
+			const contentElementsv5 = document.querySelectorAll('.card');
+
+			// Apply saved settings on page load
+			document.addEventListener('DOMContentLoaded', () => {
+				const darkMode = localStorage.getItem('darkMode') === 'true';
+				if (darkModeToggle) {
+					darkModeToggle.checked = darkMode;
+				}
+				applyDarkMode(darkMode);
+			});
+
+			// Toggle dark mode and save the setting
+			if (darkModeToggle) {
+				darkModeToggle.addEventListener('change', (event) => {
+					const isDarkMode = event.target.checked;
+					applyDarkMode(isDarkMode);
+					localStorage.setItem('darkMode', isDarkMode);
+				});
+			}
+
+			function applyDarkMode(enabled) {
+				contentElements.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+				contentElementsv3.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+				contentElementsv5.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+			}
+		</script>
 	</body>
 </html>

@@ -16,10 +16,11 @@
 	<body>
 		<div class="navbar">
 			<a class="ubuntu-regular" href="../home/home.html"><i class="fa fa-fw fa-home"></i> Home</a>
-			<a class="active" class="ubuntu-regular" href="/../../m/about/about.html"><i class="fa fa-fw fa-search"></i> About</a>
+			<a class="active" class="ubuntu-regular" href="about.html"><i class="fa fa-fw fa-search"></i> About</a>
 			<a class="ubuntu-regular" href="../c/contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
 			<a class="ubuntu-regular" href="../g/game.html"><i class="fa fa-gamepad"></i> Games</a>
 			<a class="ubuntu-regular" href="../ac/achievements.html"><i class="fa fa-handshake-o"></i> Achievements</a>
+			<a class="ubuntu-regular" href="../s/settings.html"><i class="fa fa-gear"></i> Settings</a>
     	</div>
 		<div class="video-background">
 		<video autoplay muted loop id="bg-video">
@@ -32,6 +33,48 @@
 		<br><br><br><br><br>
 		<h1 class="center">About Me</h1>
 		<br><br>
-		<p class="center-v3">My name is Nicholas Brislane, a student at Kingswood High School studying Physics, Chemistry, Engineering, Enterprise Computing, Mathematics Advanced, Math Extension 1, and English Standard. I am capable of complex problem solving and critical thinking. I am also very curious, hardworking and creative. I have basic knowledge in multiple coding languages, such as C++, Python, HTML/CSS/JS and C#. I am interested in complex mathematics, physics, chemistry, and meteorology. I strive to understand and comprehend the topics I learn to the best of my ability. I attempt all the work I am given to the high standards I expect. <br><br>My achievements can be found <a href="../ac/achievements.html">here.</a><br>You can contact me <a href="../c/contact.html">here.</a><br>If you want to check out what I have made, <a href="../g/game.html">click here.</a><br><br><strong>Education:</strong> Kingswood High School, 2020-2025<br><strong>Current Job:</strong> Crew Member at Cambridge Gardens McDonalds</p>
+		<p class="center-v3">My name is Nicholas Brislane, a student at Kingswood High School studying Physics, Chemistry, Engineering, Enterprise Computing, Mathematics Advanced, Math Extension 1, and English Standard. I am capable of complex problem solving and critical thinking. I am also very curious, hardworking and creative. I have basic knowledge in multiple coding languages, such as C++, Python, HTML/CSS/JS and C#. I am interested in complex mathematics, physics, chemistry, and meteorology. I strive to understand and comprehend the topics I learn to the best of my ability. I attempt all the work I am given to the high standards I expect. <br><br>After university, I strive to become a meteorologist. I have a deep curiosity for weather, as well as complex mathematics, both of these things are satisfied by meteorology, requiring complex knowledge of physics, advanced mathematics and how the atmosphere works. My knowledge of the weather is demonstrated in a point-base numerical weather approximation model that I constructed in python. When I reach year 12, I will enroll in the mathematics extension 2 course, ranked as the hardest HSC course in NSW. Ultimately, complex mathematics is present everywhere in physics and thus in the weather too. I am not only doing extension 2 because of the implications it has on university (if done well), but also because I enjoy doing that kind of math.<br><br>My achievements can be found <a href="../ac/achievements.html">here.</a><br>You can contact me <a href="../c/contact.html">here.</a><br>If you want to check out what I have made, <a href="../g/game.html">click here.</a><br><br><strong>Education:</strong> Kingswood High School, 2020-2025<br><strong>Old Job:</strong> Crew Member at Cambridge Gardens McDonalds [1y and 3mo]</p>
+		<script>
+			const darkModeToggle = document.getElementById('darkModeToggle');
+
+			// Select all elements with the "center" class
+			const contentElements = document.querySelectorAll('.center');
+			const contentElementsv3 = document.querySelectorAll('.center-v3');
+
+			// Apply saved settings on page load
+			document.addEventListener('DOMContentLoaded', () => {
+				const darkMode = localStorage.getItem('darkMode') === 'true';
+				if (darkModeToggle) {
+					darkModeToggle.checked = darkMode;
+				}
+				applyDarkMode(darkMode);
+			});
+
+			// Toggle dark mode and save the setting
+			if (darkModeToggle) {
+				darkModeToggle.addEventListener('change', (event) => {
+					const isDarkMode = event.target.checked;
+					applyDarkMode(isDarkMode);
+					localStorage.setItem('darkMode', isDarkMode);
+				});
+			}
+
+			function applyDarkMode(enabled) {
+				contentElements.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+				contentElementsv3.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+			}
+		</script>
 	</body>
 </html>

@@ -251,6 +251,10 @@ button:hover, a:hover {
 .card {
 	background-color: white;
 }
+.card.dark-mode {
+	background-color: #131313 !important;
+	color: white !important;
+}
 .card-container {
     display: flex;
     justify-content: space-between; /* Adjusts the space between cards */
@@ -393,4 +397,19 @@ div.scroll-container img {
 .active-v9,
 .demo-v9:hover {
   opacity: 1;
+}
+.center-v3.dark-mode {
+	color: white !important;
+	border: rgba(0,0,0,0.5) !important;
+	background-color: rgba(0,0,0,0.5) !important;
+}
+.center.dark-mode {
+	color: white !important;
+	border: rgba(0,0,0,0.5) !important;
+	background-color: rgba(0,0,0,0.5) !important;
+}
+.center-v2.dark-mode {
+	color: white !important;
+	border: rgba(0,0,0,0.5) !important;
+	background-color: rgba(0,0,0,0.5) !important;
 }

@@ -187,6 +187,19 @@ input[type=text], select, textarea {
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
+input[type=text].dark-mode, select.dark-mode, textarea.dark-mode {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+	border: 1px solid #131313; /* Gray border */
+	color: white;
+	background-color: #131313;
+}
+  
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
@@ -212,4 +225,53 @@ input[type=submit]:hover {
   text-align: center;
   border-radius: 10px;
   padding: 20px;
+}
+.extra-container.dark-mode {
+	color: white !important;
+	border: rgba(0,0,0,0.5) !important;
+	background-color: rgba(0,0,0,0.5) !important;
+}
+.center-v3.dark-mode {
+	color: white !important;
+	border: rgba(0,0,0,0.5) !important;
+	background-color: rgba(0,0,0,0.5) !important;
+}
+.center.dark-mode {
+	color: white !important;
+	border: rgba(0,0,0,0.5) !important;
+	background-color: rgba(0,0,0,0.5) !important;
+}
+.center-v2.dark-mode {
+	color: white !important;
+	border: rgba(0,0,0,0.5) !important;
+	background-color: rgba(0,0,0,0.5) !important;
+}
+.alert {
+  padding: 5px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+	padding: 17px;
+  float: right;
+  font-size: 62px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.red {
+	color: #f44336;
+}
+
+.big {
+	font-size: 20px;
+}
+
+.closebtn:hover {
+  color: black;
 }

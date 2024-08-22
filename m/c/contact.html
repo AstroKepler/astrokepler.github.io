@@ -20,6 +20,7 @@
 			<a class="active" class="ubuntu-regular" href="../c/contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
 			<a class="ubuntu-regular" href="../g/game.html"><i class="fa fa-gamepad"></i> Games</a>
 			<a class="ubuntu-regular" href="../ac/achievements.html"><i class="fa fa-handshake-o"></i> Achievements</a>
+			<a class="ubuntu-regular" href="../s/settings.html"><i class="fa fa-gear"></i> Settings</a>
     	</div>
 		<div class="video-background">
 		<video autoplay muted loop id="bg-video">
@@ -29,7 +30,12 @@
 		</div>
 		
 		<!-- Add more content as needed -->
-		<br><br><br><br><br>
+		<br><br><br><br>
+		<div class="alert">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+			<p class="ubuntu-regular"><strong class="red">=/</strong><strong class="big">ALERT</strong> <strong class="red">/</strong> The contact feature present on this page does not actually work. I do not own a server to host php on this on so :( </p>
+		</div>
+		<br>
 		<h1 class="center">Contact</h1>
 		<br><br>
 		<p class="center-v3">You can contact me at any time at the email <a href=mailto:"443411305@kingswoodhs.nsw.edu.au">443411305@kingswoodhs.nsw.edu.au</a><br><br> Or you can submit this form</p>
@@ -78,5 +84,80 @@
 				});
 			 </script>
 </div> 
+		<script>
+			const darkModeToggle = document.getElementById('darkModeToggle');
+
+			// Select all elements with the "center" class
+			const contentElements = document.querySelectorAll('.center');
+			const contentElementsv3 = document.querySelectorAll('.center-v3');
+			const contentElementsv4 = document.querySelectorAll('.extra-container');
+			const contentElementsv6 = document.querySelectorAll('input[type=text]');
+			const contentElementsv7 = document.querySelectorAll('select');
+			const contentElementsv8 = document.querySelectorAll('textarea');
+
+
+			// Apply saved settings on page load
+			document.addEventListener('DOMContentLoaded', () => {
+				const darkMode = localStorage.getItem('darkMode') === 'true';
+				if (darkModeToggle) {
+					darkModeToggle.checked = darkMode;
+				}
+				applyDarkMode(darkMode);
+			});
+
+			// Toggle dark mode and save the setting
+			if (darkModeToggle) {
+				darkModeToggle.addEventListener('change', (event) => {
+					const isDarkMode = event.target.checked;
+					applyDarkMode(isDarkMode);
+					localStorage.setItem('darkMode', isDarkMode);
+				});
+			}
+
+			function applyDarkMode(enabled) {
+				contentElements.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+				contentElementsv3.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+				contentElementsv4.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+				contentElementsv6.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+				contentElementsv7.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+				contentElementsv8.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+			}
+		</script>
 	</body>
 </html>

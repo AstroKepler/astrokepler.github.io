@@ -136,3 +136,39 @@
    bottom: 0;
    z-index: -1;
 }
+.alert {
+  padding: 5px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+	padding: 17px;
+  float: right;
+  font-size: 62px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.red {
+	color: #f44336;
+}
+
+.big {
+	font-size: 20px;
+}
+
+.closebtn:hover {
+  color: black;
+}
+@viewport {
+  width: device-width;
+    zoom: 1;
+    min-zoom: 1.25;
+    max-zoom: 3;
+    user-zoom: fixed;
+}

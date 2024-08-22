@@ -30,7 +30,12 @@
 		</div>
 		
 		<!-- Add more content as needed -->
-		<br><br><br><br><br>
+		<br><br><br><br>
+		<div class="alert">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+			<p class="ubuntu-regular"><strong class="red">=/</strong><strong class="big">ALERT</strong> <strong class="red">/</strong> The contact feature present on this page does not actually work. I do not own a server to host php on this on so :( </p>
+		</div>
+		<br>
 		<h1 class="center">Contact</h1>
 		<br><br>
 		<p class="center-v3">You can contact me at any time at the email <a href=mailto:"443411305@kingswoodhs.nsw.edu.au">443411305@kingswoodhs.nsw.edu.au</a><br><br> Or you can submit this form</p>
@@ -86,6 +91,10 @@
 			const contentElements = document.querySelectorAll('.center');
 			const contentElementsv3 = document.querySelectorAll('.center-v3');
 			const contentElementsv4 = document.querySelectorAll('.extra-container');
+			const contentElementsv6 = document.querySelectorAll('input[type=text]');
+			const contentElementsv7 = document.querySelectorAll('select');
+			const contentElementsv8 = document.querySelectorAll('textarea');
+
 
 			// Apply saved settings on page load
 			document.addEventListener('DOMContentLoaded', () => {
@@ -121,6 +130,27 @@
 					}
 				});
 				contentElementsv4.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+				contentElementsv6.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+				contentElementsv7.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+				contentElementsv8.forEach(element => {
 					if (enabled) {
 						element.classList.add('dark-mode');
 					} else {

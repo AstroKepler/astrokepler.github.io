@@ -299,7 +299,6 @@ div.scroll-container img {
     height: 100%;
     object-fit: cover;
     filter: blur(10px); /* Adjust the blur level as needed */
-	background-color: #131313 !important;
 }
 .center-v3 {
 	margin: auto;
@@ -415,9 +414,6 @@ div.scroll-container img {
 	background-color: rgba(0,0,0,0.5) !important;
 }
 .bg-edit {
-	
-}
-.bg-edit.dark-mode {
-	background-color: #131313;
+	background-color: #131313 !important;
 }
 	

@@ -461,6 +461,7 @@
 			const contentElements = document.querySelectorAll('.center');
 			const contentElementsv3 = document.querySelectorAll('.center-v3');
 			const contentElementsv5 = document.querySelectorAll('.card');
+			const contentElementsv9 = document.querySelectorAll('.bg-edit');
 			const video = document.getElementById("bg-video");
 
 			// Apply saved settings on page load
@@ -509,7 +510,13 @@
 				} else {
 					video.style.display = "inline";
 				}
-				
+				contentElementsv9.foreach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
 			}
 		</script>
 	</body>

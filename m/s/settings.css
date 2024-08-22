@@ -1,4 +1,10 @@
 /* Style the navigation bar */
+.dark-mode {
+	color: white;
+	border: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.5);
+}
+
 .navbar {
   position: fixed; /* Keep the navbar fixed at the top */
   top: 0; /* Position it at the top of the viewport */
@@ -163,7 +169,8 @@ html, body {
   padding: 10px;
   text-align: center;
 	border-radius: 10px;
-}
+	color: black;
+} 
 .center.dark-mode {
 	color: white !important;
 	border: rgba(0,0,0,0.5) !important;
@@ -180,19 +187,6 @@ html, body {
   padding: 10px;
   text-align: center;
 	border-radius: 10px;
+	color: black;
 } 
-.center-v3.dark-mode {
-	color: white !important;
-	border: rgba(0,0,0,0.5) !important;
-	background-color: rgba(0,0,0,0.5) !important;
-}
-.center.dark-mode {
-	color: white !important;
-	border: rgba(0,0,0,0.5) !important;
-	background-color: rgba(0,0,0,0.5) !important;
-}
-.center-v2.dark-mode {
-	color: white !important;
-	border: rgba(0,0,0,0.5) !important;
-	background-color: rgba(0,0,0,0.5) !important;
-}
+ 

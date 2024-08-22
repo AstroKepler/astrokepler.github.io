@@ -20,6 +20,7 @@
 			<a class="ubuntu-regular" href="../c/contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
 			<a class="active" class="ubuntu-regular" href="../g/game.html"><i class="fa fa-gamepad"></i> Games</a>
 			<a class="ubuntu-regular" href="../ac/achievements.html"><i class="fa fa-handshake-o"></i> Achievements</a>
+			<a class="ubuntu-regular" href="../s/settings.html"><i class="fa fa-gear"></i> Settings</a>
     	</div>
 		<div class="video-background">
 		<video autoplay muted loop id="bg-video">
@@ -33,5 +34,47 @@
 		<h1 class="center">Games and Projects</h1>
 		<br><br>
 		<p class="center-v3">Below are download links to games and projects that I have coded.<br><br><strong>Fruit Store</strong><br>Itch.io download: <a href="https://astrokepler.itch.io/fruitstore-tycoon">https://astrokepler.itch.io/fruitstore-tycoon</a><br>Mirror Download [Up to date]: <a href="../../r/files/Beta 0.12.1.rar" download>download</a><br><br><strong>Python Projects</strong><br>Basic Configurable Neural Network: <a href="../../r/files/DeepNNetwork4Layers.rar" download>download</a><br><br><strong>C++ Projects</strong><br>Command Line Calculator: <a href="../../r/files/cppcalculatortest.rar" download>download</a></p>
+		<script>
+			const darkModeToggle = document.getElementById('darkModeToggle');
+
+			// Select all elements with the "center" class
+			const contentElements = document.querySelectorAll('.center');
+			const contentElementsv3 = document.querySelectorAll('.center-v3');
+
+			// Apply saved settings on page load
+			document.addEventListener('DOMContentLoaded', () => {
+				const darkMode = localStorage.getItem('darkMode') === 'true';
+				if (darkModeToggle) {
+					darkModeToggle.checked = darkMode;
+				}
+				applyDarkMode(darkMode);
+			});
+
+			// Toggle dark mode and save the setting
+			if (darkModeToggle) {
+				darkModeToggle.addEventListener('change', (event) => {
+					const isDarkMode = event.target.checked;
+					applyDarkMode(isDarkMode);
+					localStorage.setItem('darkMode', isDarkMode);
+				});
+			}
+
+			function applyDarkMode(enabled) {
+				contentElements.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+				contentElementsv3.forEach(element => {
+					if (enabled) {
+						element.classList.add('dark-mode');
+					} else {
+						element.classList.remove('dark-mode');
+					}
+				});
+			}
+		</script>
 	</body>
 </html>

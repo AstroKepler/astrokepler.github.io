@@ -503,13 +503,13 @@
 						element.classList.remove('dark-mode');
 					}
 				});
-				video.forEach(element => {
-					if (enabled) {
-						video.style.display = "none";
-					} else {
-						video.style.display = "inline";
-					}
-				});
+				
+				if (enabled) {
+					video.style.display = "none";
+				} else {
+					video.style.display = "inline";
+				}
+				
 			}
 		</script>
 	</body>
